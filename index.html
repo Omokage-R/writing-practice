@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お手本表示ツール</title>
+</head>
+<body>
+    <textarea oninput="inputChange()" placeholder="文字を入力..." id="input"></textarea>
+    <div id="output"></div>
+</body>
+<style>
+    body{
+        text-align: center;
+        background-color: #e2e2e2;
+        font-family: "游教科書体 横用","HG教科書体",serif;
+        font-weight: bold;
+        margin: 2%;
+    }
+    textarea{
+        resize: none;
+        font-size: 2vmax;
+        font-family: "游教科書体 横用","HG教科書体",serif;
+        width: 70%;
+        padding: 0.5vmax;
+        margin-bottom: 1%;
+        background: #bdbdbd;
+        border: none;
+        transition: 0.3s;
+    }
+    textarea:focus {
+        background: #ffffff;
+        outline: none;
+    }
+    #output{
+        padding: 3% 0;
+        font-size: 10vmax;
+        text-wrap: balance;
+    }
+</style>
+<script>
+    function inputChange(){
+        document.getElementById("output").innerText = document.getElementById("input").value;
+    }
+</script>
+</html>
